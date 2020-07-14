@@ -20,13 +20,13 @@ How to run
 
 2. The study will require a Gurobi license to perform cardinality matching. In R, use the following code to install Gurobi from your local machine:
 
-'''r
+```r
 if (!require('gurobi')){install.packages("/gurobi_9.0-1.zip", repos = NULL)}
-'''
+```
 
 3. In R, use the following code to install the study package and its dependencies:
 
-'''r
+```r
 install.packages("devtools")
 
 library(devtools)
@@ -35,12 +35,12 @@ install_github("ohdsi/EmpiricalCalibration", ref = "v2.1.0")
 if (!require("pacman")) install.packages("pacman")
 pacman::p_load(drat, SqlRender, DatabaseConnector, grid, reshape2, dplyr,
                designmatch, caret, rdist, gurobi, caTools, openxlsx,
-		  CohortMethod, EmpiricalCalibration)'''
+		  CohortMethod, EmpiricalCalibration)
+		  ```
       
 4. Once installed, you can execute the study by modifying and using the following code:
 
-
-'''r
+```r
 # Set working directory
 wd <- "C:/myworkingdirectory"
 setwd(wd)
@@ -90,6 +90,7 @@ ncs <- c(434165,436409,199192,4088290,4092879,44783954,75911,137951,77965,
          73754,136773,376382,439776,4248728,440021,434626,4241530,
          36717115,437969,4119307,195590,42873170,80502,
          436785,74464,72404,439935,437092,442306,378424)'''
+```
 
 o	For details on how to configurecreateConnectionDetails in your environment type this for help:
  ?createConnectionDetails
@@ -101,7 +102,7 @@ o	cmDataFolder (created in the next step) specifies the location where data on t
 
 6.**	To generate data on the study population, execute the following code:
 
-'''
+```r
 # Create cohort table
 createCohortTable(connectionDetails = connectionDetails,
                   cohortDatabaseSchema = cohortDatabaseSchema,
@@ -157,7 +158,7 @@ if (dir.exists(cmDataFolder) == FALSE) {
 saveCohortMethodData(cmData, cmDataFolder)
 
 rm(sql, aceI, thz, cs, cmData)
-'''
+```
 
 7. To execute the study, run the R scripts titled “generateData_studyPopulation.R” and generateData_subsampleGroup.R” to perform analyses within the study population or subsample groups, respectively.
 
