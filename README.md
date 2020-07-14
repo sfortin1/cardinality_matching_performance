@@ -5,7 +5,6 @@ Comparison of Cardinality Matching and Propensity Score Matching
 - Study type: **Methods Research**
 - Tags: -
 - Study lead: **Stephen Fortin**
-- Study lead forums tag: sfortin1
 - Study start date: **March 1, 2020**
 - Study end date: **August 1, 2020**
 - Protocol: 
@@ -98,9 +97,9 @@ ncs <- c(434165,436409,199192,4088290,4092879,44783954,75911,137951,77965,
 - oracleTempSchema should be used in Oracle to specify a schema where the user has write privileges for storing temporary tables.
 - cmDataFolder (created in the next step) specifies the location where data on the study population is stored
 
-5.**	Download all required SQL and R scripts here, and place into your working directory
+5. Download all required SQL and R scripts here, and place into your working directory
 
-6.**	To generate data on the study population, execute the following code:
+6. To generate data on the study population, execute the following code:
 
 ```r
 # Create cohort table
