@@ -1,29 +1,29 @@
 Comparison of Cardinality Matching and Propensity Score Matching
 ================================================================
  
-•	Analytics use case(s): Population-Level Estimation, small sample sizes, limited covariate overlap
-•	Study type: Methods Research
-•	Tags: -
-•	Study lead: Stephen Fortin
-•	Study lead forums tag: sfortin1
-•	Study start date: March 1, 2020
-•	Study end date: August 1, 2010
-•	Protocol: protocol link 
-•	Publications: - 
+- Analytics use case(s): **Population-Level Estimation, small sample sizes, limited covariate overlap**
+- Study type: **Methods Research**
+- Tags: -
+- Study lead: **Stephen Fortin**
+- Study lead forums tag: sfortin1
+- Study start date: **March 1, 2020**
+- Study end date: **August 1, 2020**
+- Protocol: 
+- Publications: 
 
 This study aims to evaluate the performance of large-scale propensity score matching and cardinality matching at progressively smaller sample sizes and more stringent parameter settings. The study allows for analyses to be performed in subsamples of the study population, and further allows results from analyses to be considered jointly across multiple subsample draws.
 
 How to run
 ==========
 
-1. **Make sure that you have Java installed. If you don't have Java already installed on your computed (on most computers it already is installed), go to java.com to get the latest version. (If you have trouble building with rJava below, be sure on Windows that your Path variable includes the path to jvm.dll (Windows Button --> type "path" --> Edit Environmental Variables --> Edit PATH variable, add to end ;C:/Program Files/Java/jre/bin/server) or wherever it is on your system).
+1. Make sure that you have Java installed. If you don't have Java already installed on your computed (on most computers it already is installed), go to java.com to get the latest version. (If you have trouble building with rJava below, be sure on Windows that your Path variable includes the path to jvm.dll (Windows Button --> type "path" --> Edit Environmental Variables --> Edit PATH variable, add to end ;C:/Program Files/Java/jre/bin/server) or wherever it is on your system).
 
-2. **The study will require a Gurobi license to perform cardinality matching. In R, use the following code to install Gurobi from your local machine:
+2. The study will require a Gurobi license to perform cardinality matching. In R, use the following code to install Gurobi from your local machine:
 
 '''if (!require('gurobi')){install.packages("/gurobi_9.0-1.zip", repos = NULL)}
 '''
 
-3. **In R, use the following code to install the study package and its dependencies:
+3. In R, use the following code to install the study package and its dependencies:
 
 '''install.packages("devtools")
 
@@ -35,10 +35,10 @@ pacman::p_load(drat, SqlRender, DatabaseConnector, grid, reshape2, dplyr,
                designmatch, caret, rdist, gurobi, caTools, openxlsx,
 		  CohortMethod, EmpiricalCalibration)'''
       
-4.**	Once installed, you can execute the study by modifying and using the following code:
+4. Once installed, you can execute the study by modifying and using the following code:
 
-'''
-# Set working directory
+
+'''# Set working directory
 wd <- "C:/myworkingdirectory"
 setwd(wd)
 
@@ -155,5 +155,5 @@ saveCohortMethodData(cmData, cmDataFolder)
 
 rm(sql, aceI, thz, cs, cmData) '''
 
-7.**	To execute the study, run the R scripts titled “generateData_studyPopulation.R” and generateData_subsampleGroup.R” to perform analyses within the study population or subsample groups, respectively.
+7. To execute the study, run the R scripts titled “generateData_studyPopulation.R” and generateData_subsampleGroup.R” to perform analyses within the study population or subsample groups, respectively.
 
