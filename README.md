@@ -19,12 +19,13 @@ How to run
 1.**	Make sure that you have Java installed. If you don't have Java already installed on your computed (on most computers it already is installed), go to java.com to get the latest version. (If you have trouble building with rJava below, be sure on Windows that your Path variable includes the path to jvm.dll (Windows Button --> type "path" --> Edit Environmental Variables --> Edit PATH variable, add to end ;C:/Program Files/Java/jre/bin/server) or wherever it is on your system).
 
 2.**	The study will require a Gurobi license to perform cardinality matching. In R, use the following code to install Gurobi from your local machine:
-if (!require('gurobi')){install.packages("/gurobi_9.0-1.zip", repos = NULL)}
+
+'''if (!require('gurobi')){install.packages("/gurobi_9.0-1.zip", repos = NULL)}'''
 
 3.**	In R, use the following code to install the study package and its dependencies:
-install.packages("devtools")
 
-'''
+'''install.packages("devtools")
+
 library(devtools)
 install_github("ohdsi/CohortMethod", ref = "v3.1.2")
 install_github("ohdsi/EmpiricalCalibration", ref = "v2.1.0")
