@@ -20,12 +20,14 @@ How to run
 
 2. The study will require a Gurobi license to perform cardinality matching. In R, use the following code to install Gurobi from your local machine:
 
-'''if (!require('gurobi')){install.packages("/gurobi_9.0-1.zip", repos = NULL)}
+'''r
+if (!require('gurobi')){install.packages("/gurobi_9.0-1.zip", repos = NULL)}
 '''
 
 3. In R, use the following code to install the study package and its dependencies:
 
-'''install.packages("devtools")
+'''r
+install.packages("devtools")
 
 library(devtools)
 install_github("ohdsi/CohortMethod", ref = "v3.1.2")
@@ -38,7 +40,8 @@ pacman::p_load(drat, SqlRender, DatabaseConnector, grid, reshape2, dplyr,
 4. Once installed, you can execute the study by modifying and using the following code:
 
 
-'''# Set working directory
+'''r
+# Set working directory
 wd <- "C:/myworkingdirectory"
 setwd(wd)
 
@@ -153,7 +156,8 @@ if (dir.exists(cmDataFolder) == FALSE) {
 # Save data
 saveCohortMethodData(cmData, cmDataFolder)
 
-rm(sql, aceI, thz, cs, cmData) '''
+rm(sql, aceI, thz, cs, cmData)
+'''
 
 7. To execute the study, run the R scripts titled “generateData_studyPopulation.R” and generateData_subsampleGroup.R” to perform analyses within the study population or subsample groups, respectively.
 
