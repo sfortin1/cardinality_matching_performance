@@ -36,7 +36,7 @@ if (!require("pacman")) install.packages("pacman")
 pacman::p_load(drat, SqlRender, DatabaseConnector, grid, reshape2, dplyr,
                designmatch, caret, rdist, gurobi, caTools, openxlsx,
 		  CohortMethod, EmpiricalCalibration)
-		  ```
+```
       
 4. Once installed, you can execute the study by modifying and using the following code:
 
@@ -92,11 +92,11 @@ ncs <- c(434165,436409,199192,4088290,4092879,44783954,75911,137951,77965,
          436785,74464,72404,439935,437092,442306,378424)'''
 ```
 
-o	For details on how to configurecreateConnectionDetails in your environment type this for help:
+- For details on how to configurecreateConnectionDetails in your environment type this for help:
  ?createConnectionDetails
-o	cdmDatabaseSchema should specify the schema name where your patient-level data in OMOP CDM format resides. Note that for SQL Server, this should include both the database and schema name, for example 'cdm_data.dbo'.
-o	oracleTempSchema should be used in Oracle to specify a schema where the user has write privileges for storing temporary tables.
-o	cmDataFolder (created in the next step) specifies the location where data on the study population is stored
+- cdmDatabaseSchema should specify the schema name where your patient-level data in OMOP CDM format resides. Note that for SQL Server, this should include both the database and schema name, for example 'cdm_data.dbo'.
+- oracleTempSchema should be used in Oracle to specify a schema where the user has write privileges for storing temporary tables.
+- cmDataFolder (created in the next step) specifies the location where data on the study population is stored
 
 5.**	Download all required SQL and R scripts here, and place into your working directory
 
