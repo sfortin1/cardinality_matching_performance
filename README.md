@@ -7,7 +7,7 @@ Comparison of Cardinality Matching and Propensity Score Matching
 - Study lead: **Stephen Fortin**
 - Study start date: **March 1, 2020**
 - Study end date: **August 1, 2020**
-- Protocol: 
+- Protocol: **[MS Doc](https://github.com/sfortin1/cardinality_matching_performance/tree/master/Protocol)**
 - Publications: 
 
 This study aims to evaluate the performance of large-scale propensity score matching and cardinality matching at progressively smaller sample sizes and more stringent parameter settings. The study allows for analyses to be performed in subsamples of the study population, and further allows results from analyses to be considered jointly across multiple subsample draws.
@@ -17,7 +17,7 @@ How to run
 
 1. Make sure that you have Java installed. If you don't have Java already installed on your computed (on most computers it already is installed), go to java.com to get the latest version. (If you have trouble building with rJava below, be sure on Windows that your Path variable includes the path to jvm.dll (Windows Button --> type "path" --> Edit Environmental Variables --> Edit PATH variable, add to end ;C:/Program Files/Java/jre/bin/server) or wherever it is on your system).
 
-2. The study will require a Gurobi license to perform cardinality matching. In R, use the following code to install Gurobi from your local machine:
+2. The study will require a Gurobi license and Gurobi to be installed on you local machine to perform cardinality matching. In R, use the following code to install Gurobi from your local machine:
 
 ```r
 if (!require('gurobi')){install.packages("/gurobi_9.0-1.zip", repos = NULL)}
@@ -58,7 +58,7 @@ cdmVersion <- "1103"
 
 # The name of the database schema and tables where the study-specific cohorts will be instantiated:
 cohortDatabaseSchema <- "Scratch.dbo"
-cohortOutcomeTable <- "SF_Methods_1_Outcomes"
+cohortOutcomeTable <- "Outcome_Table"
 
 # For Oracle: define a schema that can be used to emulate temp tables:
 oracleTempSchema <- NULL
@@ -159,5 +159,36 @@ saveCohortMethodData(cmData, cmDataFolder)
 rm(sql, aceI, thz, cs, cmData)
 ```
 
-7. To execute the study, run the R scripts titled “generateData_studyPopulation.R” and generateData_subsampleGroup.R” to perform analyses within the study population or subsample groups, respectively.
+7. Download all of the scripts from the 'R and SQL' folder of this repository (found [here](https://github.com/sfortin1/cardinality_matching_performance/tree/master/R%20and%20SQL)) to your working directory.
+
+8. To execute the study, run the "generateData_studyPopulation.R" and "generateData_subsampleGroup.R" as follows:
+
+- To execute analyses within study population, run "generateData_studyPopulation.R" with the following parameter settings:
+
+```r
+splitRatio <- 1.00
+num_cohorts <- 1
+```
+
+- To execute analyses within the 10% subsample group, run "generateData_subsampleGroup.R" with the following parameter settings:
+
+```r
+splitRatio <- 0.10
+num_cohorts <- 5
+```
+
+- To execute analyses within the 1% subsample group, run "generateData_subsampleGroup.R" with the following parameter settings:
+
+```r
+splitRatio <- 0.01
+num_cohorts <- 51
+```
+
+- To execute analyses within the 0.5% subsample group, run "generateData_subsampleGroup.R" with the following parameter settings:
+
+```r
+splitRatio <- 0.005
+num_cohorts <- 107
+```
+
 
