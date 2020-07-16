@@ -14,7 +14,7 @@ Comparison of Cardinality Matching and Propensity Score Matching
 - Publications: **-**
 - Results explorer: **-**
 
-This study aims to evaluate the performance of large-scale propensity score matching and cardinality matching at progressively smaller sample sizes and more stringent parameter settings. The study allows for analyses to be performed in subsamples of the study population, and further allows results from analyses to be considered jointly across multiple subsample draws.
+This study aims to evaluate the performance of cardinality matching and large-scale propensity score matching at progressively smaller sample sizes and more stringent parameter settings among new users of ACEI vs. thiazide or thiazide-like diuretic monotherapy applying the framework set forth in the LEGEND-HTN study.
 
 How to run
 ==========
