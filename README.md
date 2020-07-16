@@ -1,18 +1,18 @@
 Comparison of Cardinality Matching and Propensity Score Matching
 ================================================================
  
-Study title: **Comparison of cardinality matching and propensity score matching for causal inference in observational research with progressively smaller sample sizes: a comparative new user cohort study**          
-Status: <img src="https://img.shields.io/badge/Study%20Status-Results%20Available-yellow.svg" alt="Study Status: Results Available"> 
-Analytics use case: **Population-Level Estimation** 
-Study type: **Methods Research** 
-Tags: Cardinality Matching 
-Study lead: Stephen Fortin 
-Study lead forums tag
-Study start date: March 1, 2020 
-Study end date: -
-Protocol: [MS Doc](https://github.com/sfortin1/cardinality_matching_performance/tree/master/Protocol)
-Publications: -
-Results explorer: -
+- Study title: **Comparison of cardinality matching and propensity score matching for causal inference in observational research with progressively smaller sample sizes: a comparative new user cohort study**          
+- Status: <img src="https://img.shields.io/badge/Study%20Status-Results%20Available-yellow.svg" alt="Study Status: Results Available"> 
+- Analytics use case: **Population-Level Estimation** 
+- Study type: **Methods Research** 
+- Tags: Cardinality Matching 
+- Study lead: Stephen Fortin 
+- Study lead forums tag
+- Study start date: March 1, 2020 
+- Study end date: -
+- Protocol: [MS Doc](https://github.com/sfortin1/cardinality_matching_performance/tree/master/Protocol)
+- Publications: -
+- Results explorer: -
 
 This study aims to evaluate the performance of large-scale propensity score matching and cardinality matching at progressively smaller sample sizes and more stringent parameter settings. The study allows for analyses to be performed in subsamples of the study population, and further allows results from analyses to be considered jointly across multiple subsample draws.
 
